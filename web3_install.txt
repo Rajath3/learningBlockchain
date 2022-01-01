@@ -1,0 +1,19 @@
+Web3.js is like frontend for ethereum nodes.
+We connect through JSON-RPC protocol(Remote execution of code on any platform?)
+, in sense it resembles XML/SOAP request(Heard about id field, it is required for response from server) 
+
+
+1. Download and install node js
+2. Download and install ganache from https://trufflesuite.com/ganache/
+3. On terminal install web3, npm install web3
+
+
+Check Account balance
+
+var Web3 = require('web3')
+web3 = new Web3('http://127.0.0.1:7545')
+web3.eth.getBalance('0xd67Fd1C64217dd578F20b6f44416d9A5c72870c2', (err, wei) => { balance = web3.utils.fromWei(wei, 'ether')})
+balance
+
+Examples:
+https://github.com/dappuniversity/web3_examples/blob/master/examples/2_read_smart_contract.js
